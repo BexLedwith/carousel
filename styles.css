@@ -36,7 +36,7 @@
   justify-content: space-between;
   position: absolute;
   top: 50%;
-  tranform: translateY(
+  transform: translateY(
     -50%
   ); /*centers and takes into acount height of the button*/
 }
