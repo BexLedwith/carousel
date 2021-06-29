@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+.container {
+  max-width: 600px;
+  margin: auto;
 }
 
 .carousel {
@@ -15,6 +16,8 @@ body {
 
 .carousel-item {
   display: none;
+  position: absolute;
+  z-index: -1;
 }
 
 .carousel-item img {
@@ -24,4 +27,19 @@ body {
 
 .carousel-item-visible {
   display: unset;
+}
+
+/* buttons */
+.carousel-actions {
+  padding: 200px 0 20px 0;
+}
+
+#carousel-button-prev {
+  float: left;
+  margin-left: 10px;
+}
+
+#carousel-button-next {
+  float: right;
+  margin-right: 10px;
 }
