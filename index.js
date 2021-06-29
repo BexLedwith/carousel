@@ -1,14 +1,26 @@
 const slides = document.getElementsByClassName("carousel-item");
-let slide = 0;
-
+let slidePosition = 0;
 const totalSlides = slides.length;
-const buttonPrev = document.getElementById("#carousel-button-prev");
-const buttonNext = document.getElementById("#carousel-button-next");
 
-buttonPrev.addEventListener("click", moveToPrevSlide);
+const currentSlide = slides[slidePosition];
 
-buttonNext.addEventListener("click", moveToNextSlide);
+document
+  .getElementById("carousel-button-prev")
+  .addEventListener("click", moveToPrevSlide);
 
-function moveToNextSlide() {}
+document
+  .getElementById("carousel-button-next")
+  .addEventListener("click", moveToNextSlide);
+
+function moveToNextSlide() {
+  if (slidePosition === totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+  currentSlide.classList.add(
+    "carousel-item-visible"
+  ); /*make current slide visible*/
+}
 
 function moveToPrevSlide() {}
