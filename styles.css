@@ -1,0 +1,27 @@
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.carousel {
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item img {
+  max-width: 600px;
+  object-fit: cover; /* make image take up entire div "carousel item"*/
+}
+
+.carousel-item-visible {
+  display: unset;
+}
