@@ -2,8 +2,6 @@ const slides = document.getElementsByClassName("carousel-item");
 let slidePosition = 0;
 const totalSlides = slides.length;
 
-const currentSlide = slides[slidePosition];
-
 document
   .getElementById("carousel-button-prev")
   .addEventListener("click", moveToPrevSlide);
@@ -13,12 +11,8 @@ document
   .addEventListener("click", moveToNextSlide);
 
 function moveToNextSlide() {
-  if (slidePosition === totalSlides - 1) {
-    slidePosition = 0;
-  } else {
-    slidePosition++;
-  }
-  currentSlide.classList.add(
+  slidePosition === totalSlides - 1 ? (slidePosition = 0) : slidePosition++;
+  slides[slidePosition].classList.add(
     "carousel-item-visible"
   ); /*make current slide visible*/
 }
