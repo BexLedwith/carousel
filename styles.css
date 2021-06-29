@@ -58,3 +58,8 @@
 #carousel-button-next {
   margin-right: 20px;
 }
+
+/* class to hide carousel item */
+.carousel-item-hidden {
+  display: none;
+}
