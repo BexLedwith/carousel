@@ -16,15 +16,13 @@
 
 .carousel-item {
   display: none;
-  position: absolute;
-  z-index: -1;
 }
 
 .carousel-item img {
   width: 100%;
   height: auto; /*height and width for responsive*/
   max-width: 600px;
-  object-fit: cover; /* make image take up entire div "carousel item"*/
+  /* make image take up entire div "carousel item"*/
 }
 
 .carousel-item-visible {
@@ -33,9 +31,11 @@
 
 /* buttons */
 .carousel-actions {
-  padding: 200px 0 20px 0;
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   position: absolute;
+  top: 50%;
 }
 
 .btn {
@@ -45,4 +45,13 @@
   border-radius: 50%;
   padding: 10px 15px;
   border: none;
+  cursor: pointer;
+}
+
+#carousel-button-prev {
+  margin-left: 20px;
+}
+
+#carousel-button-next {
+  margin-right: 20px;
 }
