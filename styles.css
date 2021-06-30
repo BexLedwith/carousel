@@ -28,6 +28,7 @@
 
 .carousel-item-visible {
   display: block;
+  animation: fadeVisibility 0.3s;
 }
 
 /* buttons */
@@ -58,4 +59,15 @@
 
 #carousel-button-next {
   margin-right: 20px;
+}
+
+/* smooth transitions using keyframes */
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
