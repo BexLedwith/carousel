@@ -1,7 +1,9 @@
 const slides = document.getElementsByClassName("carousel-item");
 let slidePosition = 0;
 const totalSlides = slides.length;
-const slideInterval = setInterval(moveToNextSlide, 4000); // makes autoplay //
+
+//make autoplay
+// const slideInterval = setInterval(moveToNextSlide, 4000);
 
 document
   .getElementById("carousel-button-prev")
