@@ -1,9 +1,12 @@
 const slides = document.getElementsByClassName("carousel-item");
 let slidePosition = 0;
 const totalSlides = slides.length;
+const slider = document.getElementById("range-slider");
+const output = document.getElementById("image-value");
 
-//make autoplay
-// const slideInterval = setInterval(moveToNextSlide, 4000);
+const slideInterval = setInterval(moveToNextSlide, 4000);
+
+outputValueVisibilityToggle();
 
 document
   .getElementById("carousel-button-prev")
@@ -22,14 +25,21 @@ function hideAllSlides() {
 
 function moveToNextSlide() {
   hideAllSlides();
-  slidePosition === totalSlides - 1 ? (slidePosition = 0) : slidePosition++;
-  slides[slidePosition].classList.add(
-    "carousel-item-visible"
-  ); /*make current slide visible*/
+  slidePosition === totalSlides - 1
+    ? ((slidePosition = 0), (slider.value = 1))
+    : (slidePosition++, slider.value++);
+  outputValueVisibilityToggle();
 }
 
 function moveToPrevSlide() {
   hideAllSlides();
-  slidePosition === 0 ? (slidePosition = totalSlides - 1) : slidePosition--;
+  slidePosition === 0
+    ? ((slidePosition = totalSlides - 1), (slider.value = totalSlides))
+    : (slidePosition--, slider.value--);
+  outputValueVisibilityToggle();
+}
+
+function outputValueVisibilityToggle() {
+  output.textContent = slider.value;
   slides[slidePosition].classList.add("carousel-item-visible");
 }
