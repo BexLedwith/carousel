@@ -4,7 +4,7 @@ const totalSlides = slides.length;
 const slider = document.getElementById("range-slider");
 const output = document.getElementById("image-value");
 
-// const slideInterval = setInterval(moveToNextSlide, 4000);
+const slideInterval = setInterval(moveToNextSlide, 4000);
 
 outputValueVisibilityToggle();
 
