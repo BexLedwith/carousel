@@ -4,9 +4,16 @@ const totalSlides = slides.length;
 const slider = document.getElementById("range-slider");
 const output = document.getElementById("image-value");
 
-const slideInterval = setInterval(moveToNextSlide, 4000);
+// const slideInterval = setInterval(moveToNextSlide, 4000);
 
 outputValueVisibilityToggle();
+
+slider.oninput = function () {
+  hideAllSlides();
+  slidePosition = this.value - 1;
+
+  outputValueVisibilityToggle();
+};
 
 document
   .getElementById("carousel-button-prev")
